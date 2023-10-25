@@ -17,7 +17,9 @@ export default function SmoothScroll({
   children: React.ReactNode;
 }) {
   const { scrollYProgress } = useScroll();
-  const smoothProgress = useSpring(scrollYProgress, { mass: 0.1 });
+  const smoothProgress = useSpring(scrollYProgress, {
+    mass: 0.01,
+  });
   const contentRef = useRef<HTMLDivElement>(null);
   const [contentHeight, setContentHeight] = useState(0);
   useEffect(() => {

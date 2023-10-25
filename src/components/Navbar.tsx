@@ -27,7 +27,7 @@ const Button = styled.button`
   font-family: "Inter", sans-serif;
   cursor: pointer;
   font-size: medium;
-  color: #0b183a;
+  color: #595a5d;
   font-weight: 600;
 `;
 

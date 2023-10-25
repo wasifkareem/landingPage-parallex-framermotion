@@ -5,19 +5,29 @@ import BoxThree from "./components/BoxThree";
 import BoxFour from "./components/BoxFour";
 import BoxFive from "./components/BoxFive";
 import SmoothScroll from "./components/SmoothScroll";
+import styled from "styled-components";
+
+const Wrapper = styled.div`
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 200px;
+`;
 
 function App() {
   return (
     <>
       <div>
-        <SmoothScroll>
+        {/* <SmoothScroll> */}
+        <Wrapper>
           <Navbar />
           <BoxOne />
           <BoxTwo />
           <BoxThree />
           <BoxFour />
           <BoxFive />
-        </SmoothScroll>
+        </Wrapper>
+        {/* </SmoothScroll> */}
       </div>
     </>
   );

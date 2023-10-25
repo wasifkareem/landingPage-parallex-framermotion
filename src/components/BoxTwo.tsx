@@ -1,5 +1,3 @@
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
 import styled from "styled-components";
 import cardtwo from "../assets/cardtwo.jpg";
 import cardthree from "../assets/cardthree.jpg";
@@ -8,6 +6,8 @@ import cardone from "../assets/cardone.jpg";
 import { mobile } from "../responsive";
 
 const ContainerTwo = styled.div`
+  position: relative;
+  transform-style: preserve-3d;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -16,6 +16,24 @@ const ContainerTwo = styled.div`
   padding-top: 7%;
   ${mobile({ height: "60vh", marginTop: "4rem" })}
 `;
+
+const Bubble = styled.div`
+  box-shadow: rgba(249, 247, 247, 0.17) 0px -23px 25px 0px inset,
+    rgba(251, 247, 247, 0.15) 0px -36px 30px 0px inset,
+    rgba(211, 208, 208, 0.1) 0px -79px 40px 0px inset,
+    rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(225, 213, 213, 0.09) 0px 4px 2px,
+    rgba(49, 49, 49, 0.09) 0px 8px 4px, rgba(57, 54, 54, 0.09) 0px 16px 8px;
+
+  border-radius: 100%;
+  padding: 20px 22px 20px 22px;
+  background-color: #b80404;
+  position: fixed;
+  right: 25rem;
+  bottom: 1rem;
+
+  transform: translateZ(+30px) scale(1);
+`;
+
 const Top = styled.div`
   display: flex;
   margin-top: 7%;
@@ -58,34 +76,42 @@ const BtmText = styled.p`
 `;
 
 const BoxTwo = () => {
-  const containerRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end end"],
-  });
-  const rightShift = useTransform(scrollYProgress, [0, 1], ["-20%", "0%"]);
-  const leftShift = useTransform(scrollYProgress, [0, 1], ["20%", "0%"]);
-  const upShift = useTransform(scrollYProgress, [0, 1], ["30%", "0%"]);
-
   return (
-    <ContainerTwo ref={containerRef}>
+    <ContainerTwo>
+      <Bubble
+        style={{
+          padding: "1.3rem",
+          backgroundColor: "#545454",
+          right: "85vw",
+          bottom: "65vh",
+        }}
+      ></Bubble>
+      <Bubble
+        style={{
+          padding: "2rem",
+          backgroundColor: "#0b183a",
+          right: "90vw",
+          bottom: "50vh",
+          transform: "translateZ(+20px) scale(1.2)",
+        }}
+      ></Bubble>
       <Text>Powered by our Web3.0 e-commerce middleware</Text>
       <BtmText>
         Joinedapp enables a universe of experiences & digital storefronts across
         all channels
       </BtmText>
       <Top>
-        <motion.div style={{ translateX: rightShift }}>
+        <div>
           <Img src={cardone} />
-        </motion.div>
-        <motion.div>
+        </div>
+        <div>
           <ImgCentre src={centrecard} />
-        </motion.div>
-        <motion.div style={{ translateX: leftShift }}>
+        </div>
+        <div>
           <Img src={cardtwo} />
-        </motion.div>
+        </div>
       </Top>
-      <Bottom as={motion.div} style={{ translateY: upShift }}>
+      <Bottom>
         <Img src={cardthree} />
       </Bottom>
     </ContainerTwo>
