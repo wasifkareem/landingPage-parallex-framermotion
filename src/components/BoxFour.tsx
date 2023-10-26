@@ -14,7 +14,6 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: auto auto auto;
   padding: 0 10% 0 10%;
-  /* ${mobile({ padding: "1rem", gridTemplateColumns: "auto auto" })} */
 `;
 const GridItems = styled.div`
   border: 1px solid;

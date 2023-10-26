@@ -2,9 +2,15 @@ import styled from "styled-components";
 import chatbot from "../assets/chatbot.png";
 import nft from "../assets/nft.png";
 import wallet from "../assets/wallet.jpg";
-import { AiOutlineArrowRight } from "react-icons/ai";
-import bubble1 from "../assets/bubble/bubble1.svg";
-
+import rockstar from "../assets/88rising.jpeg";
+import nfttwo from "../assets/nft2.jpg";
+import rising from "../assets/88Rising.jpg";
+import bubbleorange from "../assets/bubble/bubble1.svg";
+import bubblegreen from "../assets/bubble/bubble2.svg";
+import bubbleteal from "../assets/bubble/bubble6.svg";
+import bubbleblue from "../assets/bubble/bubble5.svg";
+import bubblewhite from "../assets/bubble/bubble3.svg";
+import { BsBoxArrowRight } from "react-icons/bs";
 import { mobile } from "../responsive";
 
 const MasterDiv = styled.div`
@@ -38,7 +44,7 @@ const ContainerThree = styled.div`
   padding: 0 7% 0 7%;
 `;
 
-const FirstCard = styled.div`
+const Card = styled.div`
   display: flex;
   justify-content: space-between;
   border-radius: 5px;
@@ -46,11 +52,15 @@ const FirstCard = styled.div`
   margin-bottom: 50px;
 
   align-items: center;
-  ${mobile({ width: "100%" })}
+  ${mobile({
+    width: "100%",
+    flexDirection: "column",
+    marginBottom: "0px",
+    height: "120vh",
+  })}
 `;
 const InfoDiv = styled.div`
   position: relative;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -60,12 +70,20 @@ const InfoDiv = styled.div`
   width: 45vw;
   border-radius: 20px;
   height: 93vh;
+  ${mobile({
+    width: "95vw",
+    height: "70vh",
+  })}
 `;
 
 const Img = styled.img`
   width: 38vw;
   border-radius: 20px;
   object-fit: cover;
+  ${mobile({
+    width: "95vw",
+    marginTop: "14px",
+  })}
 `;
 
 const InfoPara = styled.div`
@@ -76,6 +94,11 @@ const InfoPara = styled.div`
   line-height: 34px;
   display: flex;
   width: 65%;
+  ${mobile({
+    fontSize: "18px",
+    lineHeight: "20px",
+    width: "90%",
+  })}
 `;
 
 const InfoTitle = styled.div`
@@ -86,41 +109,114 @@ const InfoTitle = styled.div`
   font-size: 30px;
   width: 65%;
   display: flex;
+  ${mobile({
+    fontSize: "20px",
+  })}
 `;
 
-const Button = styled.button`
+const GridBox = styled.div`
+  box-shadow: 1px 5px 1px 1px black;
+
+  background-color: #fcf2df;
+  width: 38vw;
+  border-radius: 20px;
+  height: 93vh;
   display: flex;
-  gap: 5px;
+  justify-content: center;
   align-items: center;
-  position: absolute;
-  bottom: 35px;
-  font-family: "Inter", sans-serif;
-  border: none;
-  background-color: #006bb7;
-  padding: 1rem 1.3rem 1rem 1.3rem;
-  border-radius: 8px;
-  right: 2.4rem;
-
-  font-weight: 500;
-  color: white;
-  font-size: 18px;
-  cursor: pointer;
-  ${mobile({ right: "10px", bottom: "2px" })}
+  ${mobile({
+    width: "95vw",
+    marginBottom: "20px",
+  })}
 `;
+
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: inherit;
+  border-radius: 20px;
+  width: fit;
+  height: fit;
+  ${mobile({
+    width: "20vw",
+  })}
+`;
+
+const GridItem = styled.img`
+  margin: 0.5rem;
+  border-radius: 16px;
+  object-fit: cover;
+`;
+
+const GridBtn = styled.div`
+  background-color: #efeded;
+  margin: 0.5rem;
+  border-radius: 16px;
+  object-fit: cover;
+  display: flex;
+  font-weight: 500;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.3rem;
+  padding-top: 2rem;
+  border: 3px solid #6e52ef;
+  overflow: hidden;
+  color: #181b21;
+  font-family: "Inter", sans-serif;
+`;
+
 const ImgBubble = styled.img`
   transform: translateZ(+30px) scale(2);
   position: absolute;
-  left: 10rem;
-  top: 10rem;
+  right: 10rem;
+  top: 40rem;
+  ${mobile({
+    display: "none",
+  })}
 `;
 const BoxThree = () => {
   return (
     <>
       <MasterDiv>
-        <ImgBubble src={bubble1} />
+        <ImgBubble
+          style={{ height: "2.4rem", top: "50vh" }}
+          src={bubbleorange}
+        />
+        <ImgBubble
+          style={{ height: "0.9rem", right: "38.4rem", top: "40rem" }}
+          src={bubblegreen}
+        />
+        <ImgBubble
+          style={{ height: "0.4rem", right: "89vw", top: "16rem" }}
+          src={bubbleteal}
+        />{" "}
+        <ImgBubble
+          style={{ height: "0.5rem", right: "88vw", top: "15rem" }}
+          src={bubbleblue}
+        />
+        <ImgBubble
+          style={{ height: "2rem", right: "80vw", top: "205vh" }}
+          src={bubblegreen}
+        />
+        <ImgBubble
+          style={{ height: "2rem", right: "90vw", top: "170vh" }}
+          src={bubbleorange}
+        />{" "}
+        <ImgBubble
+          style={{ height: "0.5rem", right: "86vw", top: "160vh" }}
+          src={bubbleteal}
+        />
+        <ImgBubble
+          style={{ height: "1rem", right: "13vw", top: "190vh" }}
+          src={bubbleteal}
+        />{" "}
+        <ImgBubble
+          style={{ height: "2rem", right: "22vw", top: "250vh" }}
+          src={bubblewhite}
+        />
         <Title>Why Joinedapp?</Title>
         <ContainerThree>
-          <FirstCard>
+          <Card>
             <InfoDiv>
               <InfoTitle>Powerful AI Chatbot</InfoTitle>
               <InfoPara>
@@ -138,9 +234,47 @@ const BoxThree = () => {
               src={chatbot}
               alt=""
             />
-          </FirstCard>
-          <FirstCard>
-            <Img style={{ height: "93vh" }} src={nft} alt="" />
+          </Card>
+          <Card>
+            <GridBox>
+              <Grid>
+                <GridItem
+                  style={{
+                    height: "28vh",
+                    width: "30vh",
+                  }}
+                  src={nft}
+                  alt=""
+                />
+
+                <GridItem
+                  style={{ height: "28vh", width: "30vh" }}
+                  src={rising}
+                  alt=""
+                />
+
+                <GridItem
+                  style={{ height: "28vh", width: "30vh" }}
+                  src={rockstar}
+                  alt=""
+                />
+
+                <GridBtn>
+                  <p>Explore</p>
+                  <BsBoxArrowRight
+                    style={{
+                      fontSize: "20px",
+
+                      border: "1px dashed ",
+                      borderRadius: "100%",
+                      padding: "10px",
+                      color: "#6b6e74",
+                    }}
+                  />
+                </GridBtn>
+              </Grid>
+            </GridBox>
+
             <InfoDiv style={{ backgroundColor: "#7dde92" }}>
               <InfoTitle>Web 3.0 assets</InfoTitle>
               <InfoPara>
@@ -148,8 +282,8 @@ const BoxThree = () => {
                 brand-sponsored events included.
               </InfoPara>
             </InfoDiv>
-          </FirstCard>
-          <FirstCard>
+          </Card>
+          <Card>
             <InfoDiv style={{ backgroundColor: "#fc34f2" }}>
               <InfoTitle>Brand coins & crypto payment</InfoTitle>
               <InfoPara>
@@ -159,7 +293,7 @@ const BoxThree = () => {
             </InfoDiv>
 
             <Img style={{ height: "93vh" }} src={wallet} alt="" />
-          </FirstCard>
+          </Card>
         </ContainerThree>
       </MasterDiv>
     </>

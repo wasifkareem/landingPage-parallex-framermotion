@@ -1,9 +1,8 @@
 import styled from "styled-components";
 import vid from "../assets/vid.mp4";
-import xnft from "../assets/xnft.png";
-import bitcoin from "../assets/bitcoin.png";
 import logopic from "../assets/logopic.png";
 import { mobile } from "../responsive";
+import { useRef } from "react";
 
 const ContainerOne = styled.div`
   display: flex;
@@ -14,23 +13,6 @@ const ContainerOne = styled.div`
   ${mobile({ flexDirection: "column", padding: "0px", height: "140vh" })}
   position: relative;
   transform-style: preserve-3d;
-`;
-
-const Bubble = styled.div`
-  box-shadow: rgba(249, 247, 247, 0.17) 0px -23px 25px 0px inset,
-    rgba(251, 247, 247, 0.15) 0px -36px 30px 0px inset,
-    rgba(211, 208, 208, 0.1) 0px -79px 40px 0px inset,
-    rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(225, 213, 213, 0.09) 0px 4px 2px,
-    rgba(49, 49, 49, 0.09) 0px 8px 4px, rgba(57, 54, 54, 0.09) 0px 16px 8px;
-
-  border-radius: 100%;
-  padding: 0.9rem;
-  background-color: aqua;
-  position: fixed;
-  right: 12.2rem;
-  top: 16rem;
-
-  transform: translateZ(30px) scale(1);
 `;
 
 const TitleText = styled.div`
@@ -55,17 +37,30 @@ const Para = styled.p`
 `;
 
 const Video = styled.div`
+  position: relative;
   display: flex;
   height: 550px;
+  max-width: fit;
   margin-right: 5rem;
   border-radius: 10px;
   box-shadow: 0 4px 15px -4px #006bb7, 0 8px 10px -6px #006bb7;
-  overflow: hidden;
   --tw-shadow-color: #244af0;
   ${mobile({
     margin: "0 0 0 0",
-    height: "700px",
+    height: "00p6x",
   })}
+`;
+
+const Logo = styled.img`
+  height: 1.2rem;
+  position: absolute;
+  border-radius: 100%;
+  background-color: white;
+  padding: 0.5rem 0.55rem;
+  border: 1px dashed teal;
+  top: -1rem;
+  left: -1rem;
+  /* box-shadow: 0 4px 15px -4px #0593f8; */
 `;
 
 const TitleBtn = styled.button`
@@ -82,37 +77,31 @@ const TitleBtn = styled.button`
 `;
 
 const BoxOne = () => {
+  const videoRef = useRef();
+
+  if (videoRef.current) {
+    videoRef.current.playbackRate = 0.7;
+  }
+
   return (
     <ContainerOne>
-      <Bubble
-        style={{
-          backgroundColor: "rgb(255, 255, 255)",
-          padding: "5px 8px 5px 8px ",
-          top: "24rem",
-          border: "1px solid",
-        }}
-      >
-        <img style={{ height: "20px" }} src={logopic} alt="" />
-      </Bubble>
-
-      <Bubble
-        style={{
-          right: "26rem",
-          top: "38rem",
-          backgroundColor: "#04047ff3",
-          padding: "1rem 1.2rem 1rem 1.2rem",
-        }}
-      >
-        <img style={{ height: "40px" }} src={xnft} alt="" />
-      </Bubble>
-
       <TitleText>
         <Header>A Home for Web 3.0 commerce</Header>
         <Para>An AI-powered e-commerce solution</Para>
         <TitleBtn>Request a Demo</TitleBtn>
       </TitleText>
       <Video>
-        <video width="100%" height="100%" muted autoPlay loop src={vid}></video>
+        <Logo src={logopic} />
+        <video
+          ref={videoRef}
+          style={{ borderRadius: "10px" }}
+          width="100%"
+          height="100%"
+          muted
+          autoPlay
+          loop
+          src={vid}
+        ></video>
       </Video>
     </ContainerOne>
   );
