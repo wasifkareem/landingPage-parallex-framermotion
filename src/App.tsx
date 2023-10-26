@@ -4,7 +4,6 @@ import BoxTwo from "./components/BoxTwo";
 import BoxThree from "./components/BoxThree";
 import BoxFour from "./components/BoxFour";
 import BoxFive from "./components/BoxFive";
-import SmoothScroll from "./components/SmoothScroll";
 import styled from "styled-components";
 
 const Wrapper = styled.div`

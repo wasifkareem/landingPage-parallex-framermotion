@@ -3,6 +3,7 @@ import cardtwo from "../assets/cardtwo.jpg";
 import cardthree from "../assets/cardthree.jpg";
 import centrecard from "../assets/centrecard.png";
 import cardone from "../assets/cardone.jpg";
+import bubble1 from "../assets/bubble/bubble1.svg";
 import { mobile } from "../responsive";
 
 const ContainerTwo = styled.div`
@@ -75,9 +76,15 @@ const BtmText = styled.p`
   display: flex;
 `;
 
+const ImgBubble = styled.img`
+  transform: translateZ(+30px) scale(1);
+  position: absolute;
+`;
+
 const BoxTwo = () => {
   return (
     <ContainerTwo>
+      <ImgBubble src={bubble1} />
       <Bubble
         style={{
           padding: "1.3rem",

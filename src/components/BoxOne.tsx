@@ -86,38 +86,15 @@ const BoxOne = () => {
     <ContainerOne>
       <Bubble
         style={{
-          backgroundColor: "rgb(5, 5, 5)",
+          backgroundColor: "rgb(255, 255, 255)",
           padding: "5px 8px 5px 8px ",
           top: "24rem",
+          border: "1px solid",
         }}
       >
         <img style={{ height: "20px" }} src={logopic} alt="" />
       </Bubble>
-      <Bubble
-        style={{
-          right: "87vw",
-          top: "30rem",
-          padding: "2rem 2.2rem 2rem 2.2rem",
-          backgroundColor: "#ddddd8",
-        }}
-      >
-        <img style={{ height: "40px" }} src={bitcoin} alt="" />
-      </Bubble>
-      <Bubble
-        style={{
-          backgroundColor: "#58b5f3",
-          right: "8rem",
-          top: "14rem",
-          padding: "0.5rem",
-        }}
-      ></Bubble>
-      <Bubble
-        style={{
-          backgroundColor: "#240280dd",
-          right: "6rem",
-          padding: "0.9rem",
-        }}
-      ></Bubble>
+
       <Bubble
         style={{
           right: "26rem",
