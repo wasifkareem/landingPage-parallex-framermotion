@@ -17,7 +17,6 @@ function App() {
   return (
     <>
       <div>
-        {/* <SmoothScroll> */}
         <Wrapper>
           <Navbar />
           <BoxOne />
@@ -26,7 +25,6 @@ function App() {
           <BoxFour />
           <BoxFive />
         </Wrapper>
-        {/* </SmoothScroll> */}
       </div>
     </>
   );

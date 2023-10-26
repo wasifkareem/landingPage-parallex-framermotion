@@ -20,23 +20,6 @@ const ContainerTwo = styled.div`
   ${mobile({ height: "60vh", marginTop: "4rem" })}
 `;
 
-const Bubble = styled.div`
-  box-shadow: rgba(249, 247, 247, 0.17) 0px -23px 25px 0px inset,
-    rgba(251, 247, 247, 0.15) 0px -36px 30px 0px inset,
-    rgba(211, 208, 208, 0.1) 0px -79px 40px 0px inset,
-    rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(225, 213, 213, 0.09) 0px 4px 2px,
-    rgba(49, 49, 49, 0.09) 0px 8px 4px, rgba(57, 54, 54, 0.09) 0px 16px 8px;
-
-  border-radius: 100%;
-  padding: 20px 22px 20px 22px;
-  background-color: #b80404;
-  position: fixed;
-  right: 25rem;
-  bottom: 1rem;
-
-  transform: translateZ(+30px) scale(1);
-`;
-
 const Top = styled.div`
   display: flex;
   margin-top: 7%;

@@ -3,7 +3,6 @@ import chatbot from "../assets/chatbot.png";
 import nft from "../assets/nft.png";
 import wallet from "../assets/wallet.jpg";
 import rockstar from "../assets/88rising.jpeg";
-import nfttwo from "../assets/nft2.jpg";
 import rising from "../assets/88Rising.jpg";
 import bubbleorange from "../assets/bubble/bubble1.svg";
 import bubblegreen from "../assets/bubble/bubble2.svg";
@@ -16,11 +15,7 @@ import { mobile } from "../responsive";
 const MasterDiv = styled.div`
   display: flex;
   flex-direction: column;
-  background-image: radial-gradient(
-    circle closest-side at var(--x, 50%) var(--y, 50%),
-    #53c0eb -100%,
-    transparent 100%
-  );
+
   padding-bottom: 20%;
   position: relative;
   transform-style: preserve-3d;

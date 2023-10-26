@@ -43,7 +43,7 @@ const Video = styled.div`
   max-width: fit;
   margin-right: 5rem;
   border-radius: 10px;
-  box-shadow: 0 4px 15px -4px #006bb7, 0 8px 10px -6px #006bb7;
+  box-shadow: 0 4px 15px -4px #006bb7, 0 8px 25px -6px #006bb7;
   --tw-shadow-color: #244af0;
   ${mobile({
     margin: "0 0 0 0",
@@ -77,7 +77,7 @@ const TitleBtn = styled.button`
 `;
 
 const BoxOne = () => {
-  const videoRef = useRef();
+  const videoRef = useRef<any>();
 
   if (videoRef.current) {
     videoRef.current.playbackRate = 0.7;
