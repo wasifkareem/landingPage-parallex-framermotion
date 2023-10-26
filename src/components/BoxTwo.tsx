@@ -71,15 +71,7 @@ const BoxTwo = () => {
   return (
     <ContainerTwo>
       <ImgBubble
-        style={{
-          left: "20rem",
-          height: "35px",
-          top: "28rem",
-        }}
-        src={bubbleblue}
-      />
-      <ImgBubble
-        style={{ right: "19vw", top: "18rem", height: "3.5rem" }}
+        style={{ right: "85vw", top: "18rem", height: "1rem" }}
         src={bubbleteal}
       />
       <ImgBubble

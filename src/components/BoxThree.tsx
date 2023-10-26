@@ -273,8 +273,10 @@ const BoxThree = () => {
             <InfoDiv style={{ backgroundColor: "#7dde92" }}>
               <InfoTitle>Web 3.0 assets</InfoTitle>
               <InfoPara>
-                A platform for brand-exclusive NFT content, VIP passes to
-                brand-sponsored events included.
+                The NFT marketplace specializes in offering exclusive content
+                associated with various brands.VIP passes for events sponsored
+                by these brands, providing an extra layer of access and
+                engagement for dedicated enthusiasts and supporters
               </InfoPara>
             </InfoDiv>
           </Card>
