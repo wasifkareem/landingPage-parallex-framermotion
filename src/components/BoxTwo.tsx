@@ -59,6 +59,9 @@ const BtmText = styled.p`
   margin: 10px;
   color: #0b183a;
   display: flex;
+  ${mobile({
+    width: "80%",
+  })}
 `;
 
 const ImgBubble = styled.img`
