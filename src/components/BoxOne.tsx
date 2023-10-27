@@ -38,9 +38,8 @@ const Para = styled.p`
 
 const Video = styled.div`
   position: relative;
-  display: flex;
   height: 550px;
-  max-width: fit;
+  max-width: 16.8rem;
   margin-right: 5rem;
   border-radius: 10px;
   box-shadow: 0 4px 15px -4px #006bb7, 0 8px 25px -6px #006bb7;
