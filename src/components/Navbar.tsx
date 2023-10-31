@@ -17,7 +17,7 @@ const Logo = styled.div`
 `;
 const ButtonSec = styled.div`
   display: flex;
-  gap: 6rem;
+  gap: 3.5rem;
   ${mobile({ display: "none" })}
 `;
 
@@ -27,7 +27,7 @@ const Button = styled.button`
   font-family: "Inter", sans-serif;
   cursor: pointer;
   font-size: medium;
-  color: #595a5d;
+  color: #444445;
   font-weight: 600;
 `;
 

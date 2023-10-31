@@ -178,6 +178,15 @@ const BoxThree = () => {
           src={bubbleorange}
         />
         <ImgBubble
+          style={{
+            height: "2.2rem",
+            top: "120vh",
+            right: "70vw",
+            transform: "translateZ(+60px) scale(1.6)",
+          }}
+          src={bubbleteal}
+        />
+        <ImgBubble
           style={{ height: "0.9rem", right: "38.4rem", top: "40rem" }}
           src={bubblegreen}
         />
@@ -186,7 +195,12 @@ const BoxThree = () => {
           src={bubbleteal}
         />{" "}
         <ImgBubble
-          style={{ height: "0.5rem", right: "88vw", top: "15rem" }}
+          style={{
+            height: "0.5rem",
+            right: "80vw",
+            top: "15rem",
+            transform: "translateZ(+60px) scale(1.6)",
+          }}
           src={bubbleblue}
         />
         <ImgBubble
@@ -198,7 +212,12 @@ const BoxThree = () => {
           src={bubbleorange}
         />{" "}
         <ImgBubble
-          style={{ height: "0.5rem", right: "86vw", top: "160vh" }}
+          style={{
+            height: "0.5rem",
+            right: "80vw",
+            top: "160vh",
+            transform: "translateZ(+60px) scale(1.6)",
+          }}
           src={bubbleteal}
         />
         <ImgBubble

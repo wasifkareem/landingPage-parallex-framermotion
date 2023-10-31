@@ -74,7 +74,12 @@ const BoxTwo = () => {
   return (
     <ContainerTwo>
       <ImgBubble
-        style={{ right: "85vw", top: "18rem", height: "1rem" }}
+        style={{
+          right: "80vw",
+          top: "18rem",
+          height: "0.5rem",
+          transform: "translateZ(+50px) scale(1.6)",
+        }}
         src={bubbleteal}
       />
       <ImgBubble
@@ -86,11 +91,21 @@ const BoxTwo = () => {
         src={bubbleteal}
       />
       <ImgBubble
-        style={{ right: "10rem", top: "30rem", height: "14px" }}
+        style={{
+          right: "12rem",
+          top: "30rem",
+          height: "10px",
+          transform: "translateZ(+40px) scale(1.6)",
+        }}
         src={bubbleblue}
       />
       <ImgBubble
-        style={{ right: "9rem", top: "31.5rem", height: "14px" }}
+        style={{
+          right: "10rem",
+          top: "32rem",
+          height: "12px",
+          transform: "translateZ(+35px) scale(1.6)",
+        }}
         src={bubblewhite}
       />
 
